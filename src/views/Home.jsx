@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className="homeContainer w-full min-h-[100vh] flex">
-      <div className="productContainer flex flex-wrap justify-center gap-6">
+      <div className="productContainer flex flex-wrap justify-center gap-6 mt-[20rem]">
         {products.map((product) => {
           const isAdded = addToCart.some(
             (item) => item.id === product.id && item.toggleCart === true

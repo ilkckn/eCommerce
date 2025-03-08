@@ -1,13 +1,14 @@
-import React from 'react'
-import { useContext } from 'react'
-import { eCommerceContext } from '../context/eCommerceContext';
+import React from "react";
+import { useContext } from "react";
+import { eCommerceContext } from "../context/eCommerceContext";
 
 function Jewelery() {
-const { jewelery, addToCartHandler, addToCart } = useContext(eCommerceContext);
+  const { jewelery, addToCartHandler, addToCart } =
+    useContext(eCommerceContext);
 
   return (
-    <div className="jeweleryContainer">
-      <div className="productContainer flex flex-wrap justify-center gap-6">
+    <div className="jeweleryContainer @container">
+      <div className="productContainer flex flex-wrap justify-center gap-6 mt-[20rem] @[375px]:mt-[23rem] @[430px]:mt-[22rem] @[768px]:mt-[25rem] @[820px]:mt-[27rem] @[1024px]:mt-[20rem]">
         {jewelery.map((product) => {
           const isAdded = addToCart.some(
             (item) => item.id === product.id && item.toggleCart === true
@@ -15,7 +16,7 @@ const { jewelery, addToCartHandler, addToCart } = useContext(eCommerceContext);
           return (
             <div
               key={product.id}
-              className="productCard w-[38.5rem] flex flex-col justify-between items-start hover:scale-[1.03] transition-all duration-[.3s] cursor-pointer"
+              className="productCard w-[38.5rem] flex flex-col justify-between items-start hover:scale-[1.03] transition-all duration-[.3s] cursor-pointer @[375px]:w-[30rem] @[430px]:w-[33rem] @[768px]:w-[30rem] @[820px]:w-[35rem] @[1024px]:w-[38.5rem]"
             >
               <div className="image w-full h-[20rem] p-6 flex justify-center bg-white rounded-t-[15px]">
                 <figure className="w-full h-full flex justify-center items-center">
@@ -49,4 +50,4 @@ const { jewelery, addToCartHandler, addToCart } = useContext(eCommerceContext);
   );
 }
 
-export default Jewelery
+export default Jewelery;

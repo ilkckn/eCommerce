@@ -4,7 +4,7 @@ import Cart from "./Cart";
 
 function Navbar() {
   return (
-    <div className="navContainer w-full min-h-[10rem] flex justify-between items-center bg-purple-600 px-[5rem]">
+    <div className="navContainer w-full max-w-[1600px] min-h-[10rem] fixed top-0 left-1/2 transform -translate-x-1/2 flex justify-between items-center bg-purple-600 px-[5rem] z-10">
       <div className="logo">
         <NavLink to="/" className="text-[2.5rem] text-white font-medium">
           E-Commerce

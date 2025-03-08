@@ -62,7 +62,7 @@ function Cart() {
       </div>
 
       {cartIsOpen && (
-        <div className="cartItemsContainer flex flex-col items-center gap-4 fixed w-[53rem] h-[100vh] bg-white shadow-lg top-0 right-[0] px-1 py-10 overflow-y-scroll">
+        <div className="cartItemsContainer flex flex-col items-center gap-4 fixed w-[53rem] h-[100vh] bg-white shadow-lg top-0 right-[0] px-1 py-10 overflow-y-scroll z-10">
           <h1 className="cart-heading text-[2.5rem] text-black underline uppercase font-extrabold tracking-[1px] mb-[2rem]">Cart Products</h1>
           {addToCart.map((item) => (
             <div
