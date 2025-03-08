@@ -48,10 +48,6 @@ function ECommerceContextProvider({ children }) {
     }
   }, [products]);
 
-  const allProducts = () => {
-    setProducts(products);
-  };
-
   const menClothing = () => {
     setMen(products.filter((product) => product.category === "men's clothing"));
   };

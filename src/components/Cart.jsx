@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { eCommerceContext } from "../context/eCommerceContext";
 import { NavLink } from "react-router-dom";
 
 function Cart() {
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null);
   const {
     addToCart,
     removeFromCartHandler,
@@ -11,11 +12,34 @@ function Cart() {
     decreaseQuantity,
   } = useContext(eCommerceContext);
 
+  const handleMouseEnter = () => {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+      setTimeoutId(null);
+    }
+    setCartIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const id = setTimeout(() => {
+      setCartIsOpen(false);
+    }, 500); 
+    setTimeoutId(id);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [timeoutId]);
+
   return (
     <div
-      className="cartContainer relative"
-      onMouseEnter={() => setCartIsOpen(true)}
-      onMouseLeave={() => setCartIsOpen(false)}
+      className="cartContainer relative w-full h-full"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -38,11 +62,12 @@ function Cart() {
       </div>
 
       {cartIsOpen && (
-        <div className="cartItemsContainer flex flex-col gap-4 fixed w-[50rem] h-[100vh] bg-white shadow-lg top-0 -right-[5rem] px-20 py-10 overflow-y-scroll">
+        <div className="cartItemsContainer flex flex-col items-center gap-4 fixed w-[53rem] h-[100vh] bg-white shadow-lg top-0 right-[0] px-1 py-10 overflow-y-scroll">
+          <h1 className="cart-heading text-[2.5rem] text-black underline uppercase font-extrabold tracking-[1px] mb-[2rem]">Cart Products</h1>
           {addToCart.map((item) => (
             <div
               key={item.id}
-              className="cartItem flex justify-around items-center mb-4 border-b-[1px] border-b-primary pb-4"
+              className="cartItem w-[70%] flex justify-between items-center mb-4 border-b-[1px] border-b-primary pb-8"
             >
               <div className="image-info">
                 <img
@@ -60,17 +85,17 @@ function Cart() {
                 </div>
               </div>
               <div className="btns flex flex-col items-center gap-3">
-                <div className="increase-decrease-quantity flex items-center gap-5">
+                <div className="increase-decrease-quantity w-full flex justify-between items-center gap-5">
                   <button
                     onClick={() => increaseQuantity(item.id)}
-                    className="increase inline-flex items-center justify-center w-[2rem] h-[2rem] bg-primary rounded-[5px]"
+                    className="increase inline-flex items-center justify-center w-[2.5rem] h-[2.5rem] bg-primary rounded-[5px]"
                   >
                     +
                   </button>
                   <p className="text-primary">{item.quantity}</p>
                   <button
                     onClick={() => decreaseQuantity(item.id)}
-                    className="decrease inline-flex items-center justify-center w-[2rem] h-[2rem] bg-primary rounded-[5px]"
+                    className="decrease inline-flex items-center justify-center w-[2.5rem] h-[2.5rem] font-bold bg-primary rounded-[5px]"
                   >
                     -
                   </button>
@@ -78,14 +103,14 @@ function Cart() {
                 <div className="delete">
                   <button
                     onClick={() => removeFromCartHandler(item.id)}
-                    className="inline-flex items-center justify-center w-[7.5rem] h-[2.8rem] text-[1.4rem] tracking-[.5px] bg-red-700 rounded-[5px]"
+                    className="inline-flex items-center justify-center w-[13rem] h-[3rem] text-[1.4rem] tracking-[.5px] bg-red-700 rounded-[5px]"
                   >
                     Remove
                   </button>
                 </div>
                 <div className="gotCheckOut">
                   <NavLink to="/cart">
-                    <button className="inline-flex items-center justify-center w-[13rem] h-[2.8rem] text-[1.4rem] tracking-[.5px] bg-blue-500 rounded-[5px]">
+                    <button className="inline-flex items-center justify-center w-[13rem] h-[3rem] text-[1.4rem] tracking-[.5px] bg-blue-500 rounded-[5px]">
                       Go to Check Out
                     </button>
                   </NavLink>
