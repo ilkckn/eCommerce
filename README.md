@@ -82,11 +82,7 @@ Filter by Category: GET http://localhost:5173/category/electronics
 
 ## 📽️ Demo Video
 
-[📽️ Download Demo Video](https://github.com/ilkckn/eCommerce/releases/download/eCommerce/Demo.mp4)
-
-
-💡 Future Improvements
-
+[📽️ Download Demo Video](https://github.com/ilkckn/eCommerce/releases/tag/eCommerce/Demo.mp4)
 
 
 🤝 Contributing
