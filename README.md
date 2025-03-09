@@ -28,7 +28,7 @@ Checkout button for order processing
 
 Frontend: React (Styled with Tailwind CSS)
 
-State Management: Redux Toolkit (or Context API)
+State Management: Context API
 
 API Integration: Fetch API with async/await
 
