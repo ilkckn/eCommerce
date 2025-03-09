@@ -1,12 +1,93 @@
-# React + Vite
+eCommerce Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an e-commerce application built using the Fake Store API. Users can filter products, add them to the cart, and proceed to checkout.
 
-Currently, two official plugins are available:
+🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Listing: Fetches products from the Fake Store API
 
-## Expanding the ESLint configuration
+Category Filtering: Filters products by Men, Women, Electronics, Jewelry, and All
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Add to Cart: Users can add products to their shopping cart
+
+Cart Preview: Two ways to access the cart:
+
+Hover to open a side panel: Displays cart contents on hover
+
+Dedicated cart page
+
+Cart Management:
+
+Increase/decrease product quantity
+
+Remove products from the cart
+
+Checkout button for order processing
+
+🛠️ Technologies Used
+
+Frontend: React (Styled with Tailwind CSS)
+
+State Management: Redux Toolkit (or Context API)
+
+API Integration: Fetch API with async/await
+
+Routing: React Router
+
+📦 Installation
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/ilkckn/eCommerce.git
+cd ecommerce-project
+
+2️⃣ Install Dependencies
+
+npm install
+
+3️⃣ Start the Project
+
+npm run dev
+
+This command will start the project on a local server, accessible at http://localhost:5173/.
+
+🔍 Usage
+
+Home Page: Displays products with category-based filtering.
+
+Product Details: Clicking on a product navigates to its detail page.
+
+Cart Operations:
+
+Add, increase/decrease quantity, and remove products.
+
+Hover to preview the cart contents.
+
+Proceed to checkout.
+
+📌 API Usage
+
+The project interacts with the Fake Store API using the Fetch API with async/await. Here are some key requests:
+
+Get All Products: GET http://localhost:5173/
+
+Filter by Category: GET http://localhost:5173/category/electronics
+
+
+📷 All Products ![alt text](image.png)
+📷 Men's Products ![alt text](image-1.png)
+📷 Cart ![alt text](image-6.png)
+
+(Screenshots of the UI and functionality can be added here.)
+## 📽️ Demo Video
+
+[Watch the demo](../React-Router-Ecommerce/src/assets/video/Demo.mp4)
+
+
+💡 Future Improvements
+
+
+
+🤝 Contributing
+
+Feel free to submit pull requests or open issues if you'd like to contribute.
