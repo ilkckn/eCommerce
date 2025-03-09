@@ -20,10 +20,10 @@ function App() {
         <Filter />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path="/men-clothing" element={<MenClothing />} />
-          <Route path='/women-clothing' element={<WomenClothing />} />
-          <Route path='/electronics' element={<Electronics />} />
-          <Route path='/jewelery' element={<Jewelery />} />
+          <Route path="/category/men-clothing" element={<MenClothing />} />
+          <Route path='/category/women-clothing' element={<WomenClothing />} />
+          <Route path='/category/electronics' element={<Electronics />} />
+          <Route path='/category/jewelery' element={<Jewelery />} />
           <Route path='/cart' element={<CheckOut />} />
         </Routes>
       </ECommerceContextProvider>

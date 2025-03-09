@@ -10,22 +10,22 @@ function Filter() {
             All Products
           </button>
         </NavLink>
-        <NavLink to="/men-clothing">
+        <NavLink to="category/men-clothing">
           <button className="menClothing bg-transparent border border-purple-400 text-purple-400 text-[1.5rem] font-medium px-7 py-5 rounded-[5px] tracking-[1px] hover:bg-purple-400 hover:text-black transition-all duration-[.3s] @[430px]:text-[1.2rem] @[375px]:px-2 @[375px]:py-2 @[375px]:text-[1.2rem] @[430px]:px-3 @[430px]:py-3 @[768px]:text-[1.5rem] @[768px]:px-5 @[768px]:py-5">
             Men's Clothing
           </button>
         </NavLink>
-        <NavLink to="/women-clothing">
+        <NavLink to="category/women-clothing">
           <button className="womenClothing bg-transparent border border-purple-400 text-purple-400 text-[1.5rem] font-medium px-7 py-5 rounded-[5px] tracking-[1px] hover:bg-purple-400 hover:text-black transition-all duration-[.3s] @[430px]:text-[1.2rem] @[375px]:px-2 @[375px]:py-2 @[375px]:text-[1.2rem] @[430px]:px-3 @[430px]:py-3 @[768px]:text-[1.5rem] @[768px]:px-5 @[768px]:py-5">
             Women's Clothing
           </button>
         </NavLink>
-        <NavLink to="electronics">
+        <NavLink to="/category/electronics">
           <button className="electronics bg-transparent border border-purple-400 text-purple-400 text-[1.5rem] font-medium px-7 py-5 rounded-[5px] tracking-[1px] hover:bg-purple-400 hover:text-black transition-all duration-[.3s] @[430px]:text-[1.2rem] @[375px]:px-2 @[375px]:py-2 @[375px]:text-[1.2rem] @[430px]:px-3 @[430px]:py-3 @[768px]:text-[1.5rem] @[768px]:px-5 @[768px]:py-5">
             Electronics
           </button>
         </NavLink>
-        <NavLink to="jewelery">
+        <NavLink to="/category/jewelery">
           <button className="jewelery bg-transparent border border-purple-400 text-purple-400 text-[1.5rem] font-medium px-7 py-5 rounded-[5px] tracking-[1px] hover:bg-purple-400 hover:text-black transition-all duration-[.3s] @[430px]:text-[1.2rem] @[375px]:px-2 @[375px]:py-2 @[375px]:text-[1.2rem] @[430px]:px-3 @[430px]:py-3 @[768px]:text-[1.5rem] @[768px]:px-5 @[768px]:py-5">
             Jewelery
           </button>
