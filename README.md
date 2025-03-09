@@ -79,9 +79,10 @@ Filter by Category: GET http://localhost:5173/category/electronics
 📷 Cart ![alt text](image-6.png)
 
 (Screenshots of the UI and functionality can be added here.)
+
 ## 📽️ Demo Video
 
-[Watch the demo](../React-Router-Ecommerce/src/assets/video/Demo.mp4)
+[📽️ Download Demo Video](https://github.com/ilkckn/eCommerce/releases/download/eCommerce/Demo.mp4)
 
 
 💡 Future Improvements
